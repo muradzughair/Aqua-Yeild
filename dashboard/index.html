@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaYield — Tank Dashboard</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="data:image/png;base64,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" alt="AquaYield logo">
+      </div>
+      <span class="brand-name">AquaYield</span>
+    </div>
+
+    <nav class="nav" id="navList">
+      <button class="nav-item active" data-page="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+        <span data-i18n="nav.dashboard">Dashboard</span>
+      </button>
+      <button class="nav-item" data-page="ai">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.5.4.6 1 .6 1.6V16h6v-.6c0-.6.1-1.2.6-1.6A6 6 0 0 0 12 3Z"/></svg>
+        <span data-i18n="nav.ai">AI Suggestions</span>
+      </button>
+      <button class="nav-item" data-page="alerts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 4.5 1.5 6 1.5 6h-15S6 12.5 6 8Z"/><path d="M10.5 20a1.7 1.7 0 0 0 3 0"/></svg>
+        <span data-i18n="nav.alerts">Alerts</span>
+        <span class="nav-badge">3</span>
+      </button>
+      <button class="nav-item" data-page="history">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 15l4-5 3 3 6-7"/></svg>
+        <span data-i18n="nav.history">History &amp; Trends</span>
+      </button>
+      <button class="nav-item" data-page="device">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
+        <span data-i18n="nav.device">Device Status</span>
+      </button>
+      <button class="nav-item" data-page="tanks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        <span data-i18n="nav.tanks">Tanks</span>
+      </button>
+      <button class="nav-item" data-page="reports">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>
+        <span data-i18n="nav.reports">Reports</span>
+      </button>
+      <div class="nav-divider"></div>
+      <button class="nav-item" data-page="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        <span data-i18n="nav.settings">Settings</span>
+      </button>
+      <button class="nav-item" data-page="help">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2-3 4"/><path d="M12 17h.01"/></svg>
+        <span data-i18n="nav.help">Help &amp; Support</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="help-card">
+        <div class="icon-circle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f9aa4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 0 0 4-4V7a4 4 0 0 0-8 0v4a4 4 0 0 0 4 4Z"/><path d="M19 11a7 7 0 0 1-14 0M12 19v3"/></svg>
+        </div>
+        <p data-i18n="sidebar.helpText">Need help? We're here for you.</p>
+        <button class="btn-outline-sm" data-i18n="sidebar.contactSupport">Contact Support</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+    <header class="topbar">
+      <div class="tank-select">
+        <select class="tank-dropdown" id="tankPicker">
+          <option data-i18n="topbar.tank1">Tank 1</option>
+          <option data-i18n="topbar.tank2">Tank 2</option>
+          <option data-i18n="topbar.tank3">Tank 3</option>
+          <option data-i18n="topbar.tank4">Tank 4</option>
+        </select>
+        <span class="status-pill"><span class="dot"></span> <span data-i18n="topbar.online">Online</span></span>
+        <span class="status-pill sync-pill" id="syncPill"><span class="dot"></span> <span id="syncPillText" data-i18n="topbar.syncWaiting">Waiting for device sim…</span></span>
+      </div>
+      <div class="topbar-right">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9Z"/></svg>
+          <span id="langBtnLabel">العربية</span>
+        </button>
+        <button class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 4.5 1.5 6 1.5 6h-15S6 12.5 6 8Z"/><path d="M10.5 20a1.7 1.7 0 0 0 3 0"/></svg>
+          <span class="ping"></span>
+        </button>
+        <div class="user-chip">
+          <div class="avatar">AF</div>
+          <span class="name" data-i18n="topbar.userName">Aqua Farmer</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#98a2b3" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- ============ DASHBOARD ============ -->
+      <section class="page active" id="page-dashboard">
+        <div class="page-head"><h1 data-i18n="dash.title">Dashboard</h1><p data-i18n="dash.subtitle">Live overview of Tank 1.</p></div>
+
+        <div class="grid-2">
+          <div class="card health-card">
+            <div class="health-left">
+              <div class="health-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12c-2 3-6 5-9 5-4 0-7-2-9-5 2-3 5-5 9-5 3 0 7 2 9 5Z"/><circle cx="15" cy="12" r="1"/><path d="M4 9c1 1 1 1 1 3s0 2-1 3"/></svg>
+              </div>
+              <div>
+                <div class="health-label" data-i18n="dash.overallHealth">Overall Tank Health</div>
+                <div class="health-value">Good</div>
+                <div class="health-sub">All parameters are in safe range.</div>
+              </div>
+            </div>
+            <div class="fish-emoji">🐟</div>
+          </div>
+          <div class="card meta-card">
+            <div class="meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <div><div class="meta-label" data-i18n="dash.lastUpdated">Last Updated</div><div class="meta-value">Today, 10:30 AM</div></div>
+            </div>
+            <div class="meta-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.6a9 9 0 0 1 14 0M8.5 16a4.5 4.5 0 0 1 7 0M12 20h.01"/></svg>
+              <div><div class="meta-label" data-i18n="dash.deviceStatus">Device Status</div><div class="meta-value online" data-i18n="topbar.online">Online</div></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-title" data-i18n="dash.liveParams">Live Water Parameters</h2>
+        <div class="params-grid" id="paramsGrid"></div>
+
+        <div class="bottom-grid">
+          <div class="card panel">
+            <div class="panel-head"><h3 data-i18n="nav.ai">AI Suggestions</h3><a href="#" data-page-link="ai" data-i18n="dash.viewAll">View All</a></div>
+            <div id="dashSugg"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ AI SUGGESTIONS ============ -->
+      <section class="page" id="page-ai">
+        <div class="page-head"><h1 data-i18n="nav.ai">AI Suggestions</h1><p data-i18n="ai.subtitle">Actionable intelligence for Tank 1.</p></div>
+
+        <div class="card ai-assist-card">
+          <div class="ai-assist-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.5.4.6 1 .6 1.6V16h6v-.6c0-.6.1-1.2.6-1.6A6 6 0 0 0 12 3Z"/></svg>
+            <h3>Ask AquaYield AI</h3>
+          </div>
+
+          <div class="ai-quick-row">
+            <button class="ai-quick-chip" data-prompt="Based on the current readings, what should I do right now?">What should I do right now?</button>
+            <button class="ai-quick-chip" data-prompt="Suggest a feeding schedule and amount for today given these conditions.">Feeding suggestion</button>
+            <button class="ai-quick-chip" data-prompt="Are these readings a sign of any disease or health risk I should watch for? Search the web for anything current and relevant.">Disease / health risk check</button>
+            <button class="ai-quick-chip" data-prompt="Based on current water quality trends and typical market conditions, when would be a good time to plan harvest?">Harvest timing</button>
+          </div>
+
+          <div class="ai-ask-row">
+            <textarea id="aiQuestion" placeholder=""></textarea>
+            <button class="btn-primary" id="aiAskBtn">Ask</button>
+          </div>
+
+          <div class="ai-loading" id="aiLoading"><span class="ai-spinner"></span> Thinking…</div>
+          <div class="ai-answer" id="aiAnswer"></div>
+        </div>
+
+        <div class="tabs">
+          <button class="active" data-tab="all" data-i18n="ai.tabAll">All Suggestions</button>
+          <button data-tab="feeding" data-i18n="ai.tabFeeding">Feeding</button>
+          <button data-tab="warnings" data-i18n="ai.tabWarnings">Early Warnings</button>
+        </div>
+
+        <div class="card sugg-card critical-tone" data-cat="warnings">
+          <div class="sugg-icon critical"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+          <div class="sugg-body">
+            <div class="sugg-title-row"><h4>Critical pH &amp; Oxygen Both Low</h4><span class="chip critical">Critical</span><span class="sugg-time">Today, 11:42 AM</span></div>
+            <p class="sugg-meta">Tank 1 · pH 6.1 (safe 6.5–8.5) · DO 3.2 mg/L (safe 5–8 mg/L)</p>
+            <ul class="action-list">
+              <li>Turn on backup aerators full flow now</li>
+              <li>Add pH buffer per dosing chart</li>
+              <li>Stop feeding until levels recover</li>
+              <li>Retest water in 30 min</li>
+            </ul>
+            <div class="sugg-actions"><button class="btn-primary" style="background:var(--red-600);">Mark Handled</button><button class="btn-secondary" style="background:#fff;">View Details</button></div>
+          </div>
+        </div>
+
+        <div class="card sugg-card" data-cat="feeding">
+          <div class="sugg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 8-16 8V4Z"/></svg></div>
+          <div class="sugg-body">
+            <div class="sugg-title-row"><h4 data-i18n="ai.feedTitle">Feeding Suggestion</h4><span class="chip" data-i18n="ai.chipOptimization">Optimization</span><span class="sugg-time" data-i18n="ai.feedTime">Today, 10:30 AM</span></div>
+            <ul class="action-list"><li data-i18n="ai.feedText">Feed 1.2 kg of feed at 11:00 AM today.</li></ul>
+            <div class="sugg-actions"><button class="btn-primary" data-i18n="ai.applySchedule">Apply Schedule</button><button class="btn-secondary" data-i18n="ai.whyAmount">Why this amount?</button></div>
+          </div>
+        </div>
+
+        <div class="card sugg-card alert-tone" data-cat="warnings">
+          <div class="sugg-icon warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+          <div class="sugg-body">
+            <div class="sugg-title-row"><h4 data-i18n="ai.warnTitle">Early-Warning Suggestion</h4><span class="chip" data-i18n="ai.chipAlert">Alert</span><span class="sugg-time" data-i18n="ai.warnTime">Today, 09:15 AM</span></div>
+            <p class="sugg-meta">Ammonia +0.2 ppm</p>
+            <ul class="action-list">
+              <li>Check filtration system</li>
+              <li>Reduce feeding slightly</li>
+            </ul>
+            <div class="sugg-actions"><button class="btn-secondary" style="background:#fff;" data-i18n="ai.viewDetails">View Details</button></div>
+          </div>
+        </div>
+
+        <div class="card sugg-card" data-cat="forecast">
+          <div class="sugg-icon forecast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="sugg-body">
+            <div class="sugg-title-row"><h4 data-i18n="ai.harvestTitle">Harvest-Timing Forecast</h4><span class="chip" data-i18n="ai.chipForecast">Forecast</span><span class="sugg-time" data-i18n="ai.harvestTime">Yesterday, 06:00 PM</span></div>
+            <p class="sugg-meta">High growth &amp; good market price</p>
+            <div class="harvest-window" style="margin-bottom:12px;">Plan harvest: May 25 – May 31, 2025</div>
+            <div class="sugg-actions"><button class="btn-secondary" data-i18n="ai.viewForecast">View Forecast</button></div>
+          </div>
+        </div>
+
+        <div class="card sugg-card" data-cat="general">
+          <div class="sugg-icon ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div class="sugg-body">
+            <div class="sugg-title-row"><h4 style="color:#12805c;" data-i18n="ai.generalTitle">General Recommendation</h4><span class="sugg-time" data-i18n="ai.generalTime">May 16, 02:30 PM</span></div>
+            <p class="sugg-text" style="margin:0;" data-i18n="ai.generalText">No action needed — water quality stable.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ALERTS ============ -->
+      <section class="page" id="page-alerts">
+        <div class="page-head"><h1 data-i18n="nav.alerts">Alerts</h1><p data-i18n="alerts.subtitle">Manage notifications and system anomalies.</p></div>
+        <div class="filter-bar">
+          <div class="seg" id="alertSeg">
+            <button class="active" data-filter="all"><span data-i18n="alerts.all">All Alerts</span> <span class="count">3</span></button>
+            <button data-filter="active"><span data-i18n="alerts.active">Active</span> <span class="count">2</span></button>
+            <button data-filter="resolved" data-i18n="alerts.resolved">Resolved</button>
+          </div>
+          <button class="btn-secondary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:5px;"><path d="M22 3H2l8 9.5V19l4 2v-8.5L22 3Z"/></svg>
+            <span data-i18n="alerts.filter">Filter</span>
+          </button>
+        </div>
+
+        <div class="card" id="alertsList"></div>
+
+        <div class="pagination">
+          <button aria-label="prev">‹</button>
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <span style="color:var(--ink-400);padding:0 2px;">…</span>
+          <button aria-label="next">›</button>
+        </div>
+      </section>
+
+      <!-- ============ HISTORY & TRENDS ============ -->
+      <section class="page" id="page-history">
+        <div class="page-head page-head-row">
+          <div><h1 data-i18n="nav.history">History &amp; Trends</h1><p data-i18n="hist.subtitle">Analyze water quality parameters over time.</p></div>
+          <div style="display:flex; gap:10px;">
+            <select class="tank-dropdown"><option data-i18n="hist.last30">Last 30 Days</option><option data-i18n="hist.last7">Last 7 Days</option><option data-i18n="hist.last90">Last 90 Days</option></select>
+            <button class="btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+              <span data-i18n="hist.exportData">Export Data</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hist-layout">
+          <div>
+            <div class="card hist-side" style="margin-bottom:16px;">
+              <h4 data-i18n="hist.parameters">Parameters</h4>
+              <label class="param-check"><input type="checkbox" checked> <span data-i18n="hist.ammonia">Ammonia (NH₃)</span> <span class="dot-sw" style="background:#e04338;"></span></label>
+              <label class="param-check"><input type="checkbox"> <span data-i18n="hist.do">Dissolved Oxygen</span> <span class="dot-sw" style="background:#3b7dd8;"></span></label>
+              <label class="param-check"><input type="checkbox"> <span data-i18n="hist.temp">Temperature</span> <span class="dot-sw" style="background:#d68910;"></span></label>
+              <label class="param-check"><input type="checkbox"> <span data-i18n="hist.ph">pH Level</span> <span class="dot-sw" style="background:#1a9c72;"></span></label>
+            </div>
+            <div class="card hist-side">
+              <h4 data-i18n="hist.chartType">Chart Type</h4>
+              <div class="seg" style="width:100%;">
+                <button class="active" style="flex:1;" data-i18n="hist.line">Line</button>
+                <button style="flex:1;" data-i18n="hist.bar">Bar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card chart-card">
+            <div class="chart-head">
+              <div><h3 data-i18n="hist.ammoniaTrends">Ammonia (NH₃) Trends</h3><div class="sub" data-i18n="hist.optimalRange">Optimal range: 0 – 0.5 mg/L</div></div>
+              <div class="range-seg">
+                <button>1D</button><button>7D</button><button class="active">30D</button><button>90D</button>
+              </div>
+            </div>
+            <svg viewBox="0 0 720 230" style="width:100%; height:230px;">
+              <defs>
+                <linearGradient id="fillGood" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1a9c72" stop-opacity="0.14"/>
+                  <stop offset="100%" stop-color="#1a9c72" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="fillBad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#e04338" stop-opacity="0.16"/>
+                  <stop offset="100%" stop-color="#e04338" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="70" x2="720" y2="70" stroke="#f4a5a0" stroke-dasharray="4 4"/>
+              <text x="700" y="64" font-size="10" fill="#e04338" text-anchor="end" data-i18n="hist.criticalLimit">Critical Limit</text>
+              <rect x="0" y="70" width="720" height="130" fill="#1a9c72" opacity="0.05"/>
+              <polygon points="0,190 0,182 60,168 120,158 180,140 240,120 300,108 360,98 420,92 480,80 540,66 600,58 660,54 720,56 720,200 0,200"
+                fill="url(#fillBad)"/>
+              <polyline points="0,182 60,168 120,158 180,140 240,120 300,108 360,98 420,92 480,80 540,66 600,58 660,54 720,56"
+                fill="none" stroke="#e04338" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="660" cy="54" r="4" fill="#e04338"/>
+              <text x="20" y="14" font-size="10" fill="#98a2b3">1.0</text>
+              <text x="20" y="74" font-size="10" fill="#98a2b3">0.5</text>
+              <text x="20" y="146" font-size="10" fill="#98a2b3">0.25</text>
+              <text x="20" y="198" font-size="10" fill="#98a2b3">0.0</text>
+              <text x="0" y="222" font-size="10.5" fill="#98a2b3">May 1</text>
+              <text x="170" y="222" font-size="10.5" fill="#98a2b3">May 8</text>
+              <text x="330" y="222" font-size="10.5" fill="#98a2b3">May 15</text>
+              <text x="490" y="222" font-size="10.5" fill="#98a2b3">May 22</text>
+              <text x="670" y="222" font-size="10.5" fill="#98a2b3">May 29</text>
+            </svg>
+
+            <div class="stat-row">
+              <div class="stat-box"><div class="l" data-i18n="hist.average">Average</div><div class="v">0.42 mg/L</div></div>
+              <div class="stat-box"><div class="l" data-i18n="hist.minimum">Minimum</div><div class="v">0.12 mg/L</div><div class="d">May 4</div></div>
+              <div class="stat-box highlight"><div class="l" data-i18n="hist.maximum">Maximum</div><div class="v">0.85 mg/L</div><div class="d">May 28</div></div>
+              <div class="stat-box"><div class="l" data-i18n="hist.stdDev">Std. Dev</div><div class="v">0.18 mg/L</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DEVICE STATUS ============ -->
+      <section class="page" id="page-device">
+        <div class="page-head"><h1 data-i18n="nav.device">Device Status</h1><p data-i18n="device.subtitle">Power, connectivity, and hardware info for Tank 1's sensor box.</p></div>
+
+        <div class="status-grid">
+          <div class="card status-card">
+            <div class="status-eyebrow" data-i18n="device.powerStatus">Power Status</div>
+            <div class="status-main" style="color:var(--green-600);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+              <span data-i18n="device.battery">Battery 82%</span>
+            </div>
+            <div class="status-foot"><span data-i18n="device.solarCharging">☀️ Solar Charging</span><span style="color:var(--green-600); font-weight:600;" data-i18n="device.good">Good</span></div>
+          </div>
+          <div class="card status-card">
+            <div class="status-eyebrow" data-i18n="device.connStatus">Connectivity Status</div>
+            <div class="status-main" style="color:var(--blue-500);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.6a9 9 0 0 1 14 0M8.5 16a4.5 4.5 0 0 1 7 0M12 20h.01"/></svg>
+              <span data-i18n="device.wifiConnected">WiFi Connected</span>
+            </div>
+            <div class="status-foot"><span data-i18n="device.signalStrength">Signal Strength: <b>Strong</b></span></div>
+            <div class="status-foot" style="margin-top:4px;"><span style="color:var(--green-600); font-weight:600;" data-i18n="device.dataCurrent">Data is current</span></div>
+          </div>
+          <div class="card status-card">
+            <div class="status-eyebrow" data-i18n="device.lastReboot">Last Reboot</div>
+            <div class="status-main" style="color:var(--ink-900);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              May 10, 2025
+            </div>
+            <div class="status-foot"><span>08:15 AM</span></div>
+          </div>
+        </div>
+
+        <div class="card device-info-card">
+          <div class="status-eyebrow" style="margin-bottom:0;" data-i18n="device.deviceInfo">Device Information</div>
+          <div style="display:flex; gap:26px; margin-top:14px; flex-wrap:wrap;">
+            <div class="device-visual">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 19h20L12 3Z"/></svg>
+              <span>AQUAYIELD</span>
+            </div>
+            <div class="device-info-grid" style="flex:1; min-width:280px;">
+              <div class="dinfo-label" data-i18n="device.deviceId">Device ID</div><div class="dinfo-value">AY-BOX-01</div>
+              <div class="dinfo-label" data-i18n="device.firmware">Firmware Version</div><div class="dinfo-value">v1.2.3</div>
+              <div class="dinfo-label" data-i18n="device.deviceModel">Device Model</div><div class="dinfo-value" data-i18n="device.deviceModelValue">AquaYield Box Pro</div>
+              <div class="dinfo-label" data-i18n="device.installedOn">Installed On</div><div class="dinfo-value">Apr 12, 2025</div>
+              <div class="dinfo-label" data-i18n="device.location">Location</div><div class="dinfo-value" data-i18n="device.locationValue">Farm – North Pond</div>
+              <div></div><div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TANKS ============ -->
+      <section class="page" id="page-tanks">
+        <div class="page-head page-head-row">
+          <div><h1 data-i18n="nav.tanks">Tanks</h1><p data-i18n="tanks.subtitle">Manage and monitor all active aquaculture systems.</p></div>
+          <button class="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span data-i18n="tanks.addTank">Add Tank</span>
+          </button>
+        </div>
+        <div class="tanks-grid" id="tanksGrid"></div>
+      </section>
+
+      <!-- ============ REPORTS ============ -->
+      <section class="page" id="page-reports">
+        <div class="page-head page-head-row">
+          <div><h1 data-i18n="nav.reports">Reports</h1><p data-i18n="reports.subtitle">Generate and view automated water quality reports.</p></div>
+          <button class="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span data-i18n="reports.newReport">New Report</span>
+          </button>
+        </div>
+
+        <div class="reports-layout">
+          <div>
+            <div class="tabs">
+              <button class="active" data-rtab="recent" data-i18n="reports.tabRecent">Recent Reports</button>
+              <button data-rtab="scheduled" data-i18n="reports.tabScheduled">Scheduled</button>
+              <button data-rtab="archived" data-i18n="reports.tabArchived">Archived</button>
+            </div>
+            <div class="card" id="reportsList"></div>
+            <div class="load-more"><a href="#" data-i18n="reports.loadMore">Load More Reports</a></div>
+          </div>
+
+          <div>
+            <div class="card" style="padding:20px; margin-bottom:16px;">
+              <div style="display:flex; align-items:center; gap:9px; margin-bottom:16px;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0f9aa4" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                <h3 style="font-size:15px; margin:0;" data-i18n="reports.scheduleReport">Schedule Report</h3>
+              </div>
+              <div class="field">
+                <label data-i18n="reports.reportType">Report Type</label>
+                <select><option data-i18n="reports.comprehensive">Comprehensive Water Quality</option><option data-i18n="reports.feedingSummary">Feeding Summary</option><option data-i18n="reports.alertsSummary">Alerts Summary</option></select>
+              </div>
+              <div class="field">
+                <label data-i18n="reports.frequency">Frequency</label>
+                <select><option data-i18n="reports.weekly">Weekly</option><option data-i18n="reports.daily">Daily</option><option data-i18n="reports.monthly">Monthly</option></select>
+              </div>
+              <div class="field">
+                <label data-i18n="reports.recipients">Recipients (Emails)</label>
+                <input type="email" placeholder="manager@aquayield.com">
+              </div>
+              <button class="btn-secondary" style="width:100%;" data-i18n="reports.saveSetup">Save Setup</button>
+            </div>
+
+            <div class="card storage-card">
+              <div class="l" data-i18n="reports.storageUsed">Storage Used</div>
+              <div class="v">1.2 GB</div>
+              <div class="storage-bar"><div class="storage-bar-fill"></div></div>
+              <div class="foot" data-i18n="reports.quota">24% of 5GB Quota</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SETTINGS ============ -->
+      <section class="page" id="page-settings">
+        <div class="page-head"><h1 data-i18n="nav.settings">Settings</h1><p data-i18n="settings.subtitle">Manage your account, alerts, and app preferences.</p></div>
+        <div class="card settings-list" id="settingsList"></div>
+      </section>
+
+      <!-- ============ HELP ============ -->
+      <section class="page" id="page-help">
+        <div class="page-head"><h1 data-i18n="nav.help">Help &amp; Support</h1><p data-i18n="help.subtitle">Reach the AquaYield team or browse quick answers.</p></div>
+        <div class="card" style="padding:26px; max-width:640px;">
+          <p style="margin:0 0 16px 0; font-size:14px; color:var(--ink-700); line-height:1.6;" data-i18n="help.text">Have a question about your readings, an alert, or your device? Our support team typically replies within a few hours.</p>
+          <div style="display:flex; gap:10px;">
+            <button class="btn-primary" data-i18n="sidebar.contactSupport">Contact Support</button>
+            <button class="btn-secondary" data-i18n="help.browseFaq">Browse FAQ</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

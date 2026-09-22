@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="scene"></div>
+<div class="veil"></div>
+
+<header>
+  <div class="brand">
+    <div class="mark">AquaYield · Device Mockup</div>
+    
+  </div>
+  <div class="hint">drag to <b>rotate</b> · scroll to <b>zoom</b><br>tap a <b>tank</b> to switch</div>
+</header>
+
+<div id="syncBadge"><span class="sdot"></span><span id="syncText">Linking to dashboard…</span></div>
+<div id="tankSelector"></div>
+
+<div id="simPanel">
+  <div class="panel-title">Sensor Control · <span id="panelTankName">Tank 1</span></div>
+  <div id="sliderHost"></div>
+</div>
+
+<div id="controls">
+  <div class="toggle">
+    <button id="btn-indoor" class="active">Indoor</button>
+    <button id="btn-outdoor">Outdoor (solar)</button>
+  </div>
+</div>
+
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

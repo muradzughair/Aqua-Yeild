@@ -1,0 +1,12 @@
+# Local secrets — real API keys live only here, never in git
+dashboard/js/config.js
+
+# The old single-file prototypes, kept locally for reference only
+# (superseded by dashboard/ and simulation/, and still contain a real key)
+_original_single_file_backup/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
